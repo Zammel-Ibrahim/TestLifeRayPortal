@@ -7,19 +7,16 @@ import javax.portlet.RenderResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.bind.annotation.RenderMapping;
 
 import pl.mmalik.portal.testPortal.service.RecipiesService;
 
-import com.google.common.collect.Lists;
-
 
 /**
  * Portlet implementation class RecipiesPortlet
  */
-@Controller("recipiesPortletHandler")
+@Controller
 @RequestMapping(value = "VIEW")
 public class RecipiesPortletController {
 	private final static String VIEW_URL = "recipies/view";

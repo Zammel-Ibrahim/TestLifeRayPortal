@@ -9,8 +9,7 @@
 
 	<mvc:annotation-driven/>
 	<context:annotation-config />
-	<context:component-scan base-package="pl.mmalik.portal.testPortal.controller" />
-	<context:component-scan base-package="pl.mmalik.portal.testPortal.service" />
+	<context:component-scan base-package="pl.mmalik.portal.testPortal.*" />
 	
 	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
@@ -36,7 +35,7 @@
         	<map>
         		<entry key="view">
         			<map>
-        				<entry key="render" value-ref="recipiesPortletHandler"/>
+        				<entry key="render" value-ref="recipiesPortletController"/>
         			</map>
         		</entry>
         	</map>
