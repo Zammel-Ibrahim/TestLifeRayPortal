@@ -27,15 +27,15 @@
 		<servlet-name>view-servlet</servlet-name>
 		<url-pattern>/WEB-INF/servlet/view</url-pattern>
 	</servlet-mapping>
-	<jsp-config>
-		<taglib id="PortletTLD">
-			<taglib-uri>http://java.sun.com/portlet</taglib-uri>
-			<taglib-location>/WEB-INF/ftl/tld/std-portlet.tld</taglib-location>
-		</taglib>
+<!-- 	<jsp-config> -->
+<!-- 		<taglib id="PortletTLD"> -->
+<!-- 			<taglib-uri>http://java.sun.com/portlet</taglib-uri> -->
+<!-- 			<taglib-location>/WEB-INF/ftl/tld/std-portlet.tld</taglib-location> -->
+<!-- 		</taglib> -->
 
-		<taglib id="LiferayTLD">
-			<taglib-uri>http://liferay.com/tld/aui</taglib-uri>
-			<taglib-location>/WEB-INF/ftl/tld/liferay-aui.tld</taglib-location>
-		</taglib>
-	</jsp-config>
+<!-- 		<taglib id="LiferayTLD"> -->
+<!-- 			<taglib-uri>http://liferay.com/tld/aui</taglib-uri> -->
+<!-- 			<taglib-location>/WEB-INF/ftl/tld/liferay-aui.tld</taglib-location> -->
+<!-- 		</taglib> -->
+<!-- 	</jsp-config> -->
 </web-app>

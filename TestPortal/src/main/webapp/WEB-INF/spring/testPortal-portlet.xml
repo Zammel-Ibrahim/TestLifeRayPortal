@@ -9,7 +9,7 @@
 
 	<mvc:annotation-driven/>
 	<context:annotation-config />
-	<context:component-scan base-package="pl.mmalik.portal.testPortal.*" />
+	<context:component-scan base-package="pl.mmalik.portal.testPortal.*"/>
 	
 	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
 		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
@@ -30,13 +30,10 @@
 		<property name="freemarkerConfigurer" ref="freemarkerConfig" />
 	</bean>
 
-	<bean id="portletModeParameterHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
-    	<property name="portletModeParameterMap">
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+    	<property name="portletModeMap">
         	<map>
-        		<entry key="view">
-        			<map>
-        				<entry key="render" value-ref="recipiesPortletController"/>
-        			</map>
+        		<entry key="view"><ref bean="recipiesPortletController"/>
         		</entry>
         	</map>
        	</property>

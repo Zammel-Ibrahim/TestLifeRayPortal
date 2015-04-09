@@ -16,7 +16,7 @@ import pl.mmalik.portal.testPortal.service.RecipiesService;
 /**
  * Portlet implementation class RecipiesPortlet
  */
-@Controller
+@Controller("recipiesPortletController")
 @RequestMapping(value = "VIEW")
 public class RecipiesPortletController {
 	private final static String VIEW_URL = "recipies/view";
@@ -24,7 +24,7 @@ public class RecipiesPortletController {
 	@Autowired
 	private RecipiesService service;
 	
-	@RenderMapping(params="action=render")
+	@RenderMapping
 	public String showAllRecipies( Model model, RenderRequest request, RenderResponse response){
 		model.addAttribute("recipies", service.setRecipies());
 		return VIEW_URL;
