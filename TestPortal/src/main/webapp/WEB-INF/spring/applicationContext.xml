@@ -11,5 +11,24 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
 	
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="auto_import">/macro/common.ftl as common, spring.ftl as spring</prop>
+			</props>
+		</property>
+	</bean>
 
+	<bean id="viewResolver" class="pl.mmalik.portal.testPortal.utils.ExtendedFreeMarkerViewResolver">
+		<property name="cache" value="true" />
+		<property name="prefix" value="" />
+		<property name="suffix" value=".ftl" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="freemarkerConfigurer" ref="freemarkerConfig" />
+	</bean>
+
+	<context:component-scan base-package="pl.mmalik.portal.testPortal.*" />
 </beans>

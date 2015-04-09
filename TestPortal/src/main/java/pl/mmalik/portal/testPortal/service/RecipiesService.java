@@ -6,4 +6,6 @@ import pl.mmalik.portal.testPortal.domain.Recipies;
 
 public interface RecipiesService {
 	public List<Recipies> setRecipies();
+	
+	public List<Recipies> listSpecialRecipies();
 }
