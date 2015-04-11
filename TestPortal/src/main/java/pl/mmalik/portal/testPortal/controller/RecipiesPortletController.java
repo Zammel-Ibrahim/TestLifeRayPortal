@@ -6,10 +6,8 @@ import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.portlet.bind.annotation.ActionMapping;
 import org.springframework.web.portlet.bind.annotation.RenderMapping;
@@ -25,7 +23,6 @@ public class RecipiesPortletController {
 	private final static String VIEW_URL = "recipies/view";
 
 	@Autowired
-	@Qualifier("recipiesService")
 	private RecipiesService service;
 
 	@RenderMapping
