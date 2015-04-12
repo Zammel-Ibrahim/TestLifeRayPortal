@@ -13,16 +13,17 @@
 		
 	<context:annotation-config />
 	
-	<bean id="portletModeParameterHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
-    	<property name="portletModeParameterMap">
-        	<map>
-        		<entry key="view">
-        			<map>
-        				<entry key="render" value-ref="recipiesPortletController"/>
-        			</map>
-        		</entry>
-        	</map>
-       	</property>
-    </bean>
+	<bean class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
+	    <property name="portletModeParameterMap">
+	        <map>
+	            <entry key="view"> <!-- view portlet mode  -->
+	                <map>
+	                    <entry key="special" value-ref="recipiesPortletController"/>
+	                    <entry key="render" value-ref="recipiesPortletController"/>
+	                </map>
+	            </entry>
+	        </map>
+	    </property>
+	</bean>
     
 </beans>
